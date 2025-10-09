@@ -8,6 +8,6 @@ class InfoHandler: public LogHandler {
     LogHandler *next = nullptr;
 
   public:
-    void handleMessage(LogLevel logLevel, string message) override;
+    void handleMessage(LogLevel logLevel, string message, ObservableInterface* observableInterface) override;
     void setNext(LogHandler* logHandler) override;
 };

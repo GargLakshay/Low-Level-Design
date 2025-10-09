@@ -2,9 +2,8 @@
 #include "LogLevel.hpp"
 using namespace std;
 
-
-class LogMessage{
-	LogLevel logLevel;
-	string message;
+class LogMessage {
+    LogLevel logLevel;
+    string message;
 };
 

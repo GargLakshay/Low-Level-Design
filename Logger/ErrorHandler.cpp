@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace std;
 
-void ErrorHandler::handleMessage(LogLevel logLevel, string message) {
+void ErrorHandler::handleMessage(LogLevel logLevel, string message, ObservableInterface* observableInterface) {
     if (logLevel == LogLevel::ERROR) {
-        cout << "ERROR " + message << endl;
+        observableInterface->notifyObserver(logLevel, "ERROR " + message);
     }
 
     if (next != NULL) {
-        next->handleMessage(logLevel, message);
+        next->handleMessage(logLevel, message, observableInterface);
     }
 }
 

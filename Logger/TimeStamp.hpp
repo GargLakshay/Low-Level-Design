@@ -4,11 +4,11 @@
 #include <ctime>
 using namespace std;
 
-class TimeStamp{
+class TimeStamp {
   private:
-  TimeStamp(){
-      
-  }  
-public:
+    TimeStamp() {
+
+    }
+  public:
     static string getTimestamp();
 };

@@ -5,6 +5,6 @@ using namespace std;
 
 class DebugHandler: public LogHandler {
     LogHandler *next = NULL;
-    void handleMessage(LogLevel logLevel, string message) override;
+    void handleMessage(LogLevel logLevel, string message, ObservableInterface* observableInterface) override;
     void setNext(LogHandler* logHandler) override;
 };
